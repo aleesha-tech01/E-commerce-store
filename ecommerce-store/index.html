@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUXE — Premium Store</title>
+  <meta name="description" content="LUXE — Premium e-commerce store with curated products." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/skeleton.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dark-mode.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="#" class="logo" id="logoHome">
+        <span class="logo-icon"><i class="fa-solid fa-gem"></i></span>
+        <span class="logo-text">LUXE</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" id="mainNav">
+        <a href="#" class="nav-link active" data-section="home">Home</a>
+        <a href="#products" class="nav-link" data-section="shop">Shop</a>
+        <a href="#categories" class="nav-link" data-section="categories">Categories</a>
+        <a href="#wishlist-section" class="nav-link" data-section="wishlist">
+          Wishlist <span class="wishlist-nav-count" id="wishlistNavCount"></span>
+        </a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Search -->
+        <div class="search-wrapper" id="searchWrapper">
+          <button class="icon-btn search-toggle-btn" id="searchToggleBtn" aria-label="Toggle search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <div class="search-expand" id="searchExpand">
+            <input
+              type="text"
+              id="searchInput"
+              class="search-input"
+              placeholder="Search products…"
+              autocomplete="off"
+              aria-label="Search products"
+            />
+            <button class="search-clear-btn" id="searchClearBtn" aria-label="Clear search">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dark Mode -->
+        <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+
+        <!-- Wishlist -->
+        <button class="icon-btn wishlist-btn" id="wishlistHeaderBtn" aria-label="View wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge wishlist-badge hidden" id="wishlistBadge">0</span>
+        </button>
+
+        <!-- Cart -->
+        <button class="icon-btn cart-btn" id="cartToggleBtn" aria-label="Open cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge cart-badge hidden" id="cartBadge">0</span>
+        </button>
+
+        <!-- Hamburger -->
+        <button class="icon-btn hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="#" class="mobile-nav-link" data-section="home">Home</a>
+      <a href="#products" class="mobile-nav-link" data-section="shop">Shop</a>
+      <a href="#categories" class="mobile-nav-link" data-section="categories">Categories</a>
+      <a href="#wishlist-section" class="mobile-nav-link" data-section="wishlist">Wishlist</a>
+      <a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">New Season · 2025 Collection</span>
+      <h1 class="hero-heading">
+        Curated for the<br /><em>Discerning Few</em>
+      </h1>
+      <p class="hero-sub">
+        Premium products. Exceptional quality. Delivered to your door.
+      </p>
+      <div class="hero-cta-group">
+        <button class="btn btn-primary hero-cta" id="heroShopBtn">
+          Shop the Collection <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button class="btn btn-ghost" id="heroWishlistBtn">
+          <i class="fa-regular fa-heart"></i> Saved Items
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Products</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">4.5★</span>
+          <span class="stat-label">Avg Rating</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">Free</span>
+          <span class="stat-label">Shipping</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-glass">
+        <i class="fa-solid fa-gem hero-gem-icon"></i>
+        <p class="hero-card-label">Premium Quality</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BRANDS ===== -->
+  <section class="brands-strip">
+    <div class="brands-inner">
+      <span class="brands-label">Trusted by</span>
+      <div class="brands-logos">
+        <span class="brand-logo">VOGUE</span>
+        <span class="brand-logo">FORBES</span>
+        <span class="brand-logo">WIRED</span>
+        <span class="brand-logo">BAZAAR</span>
+        <span class="brand-logo">GQ</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS SECTION ===== -->
+  <main class="products-section" id="products">
+    <div class="section-header">
+      <h2 class="section-title">Our Collection</h2>
+      <p class="section-sub">Every piece, precisely curated.</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar" id="filterBar">
+
+      <!-- Categories -->
+      <div class="filter-group" id="categories">
+        <div class="category-buttons" id="categoryButtons" role="group" aria-label="Filter by category">
+          <!-- dynamically injected -->
+        </div>
+      </div>
+
+      <!-- Search + Sort Row -->
+      <div class="filter-controls">
+        <div class="filter-search-wrap">
+          <i class="fa-solid fa-magnifying-glass filter-search-icon"></i>
+          <input
+            type="text"
+            id="filterSearchInput"
+            class="filter-search-input"
+            placeholder="Filter products…"
+            autocomplete="off"
+          />
+        </div>
+
+        <select id="sortSelect" class="sort-select" aria-label="Sort products">
+          <option value="default">Sort by</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating-desc">Rating: Best First</option>
+          <option value="name-asc">Name: A to Z</option>
+        </select>
+
+        <button class="btn btn-outline clear-filters-btn" id="clearFiltersBtn">
+          <i class="fa-solid fa-rotate-left"></i> Clear Filters
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Product Count -->
+    <div class="product-count-bar">
+      <span class="product-count" id="productCount">Showing 0 products</span>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid" id="productGrid" role="list">
+      <!-- Skeleton cards injected here while loading -->
+    </div>
+
+    <!-- Error State -->
+    <div class="error-state hidden" id="errorState">
+      <div class="error-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <h3 class="error-title">Something went wrong</h3>
+      <p class="error-msg">We couldn't load the products. Please check your connection and try again.</p>
+      <button class="btn btn-primary" id="retryBtn">
+        <i class="fa-solid fa-arrows-rotate"></i> Try Again
+      </button>
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-state hidden" id="emptyState">
+      <div class="empty-illustration">
+        <i class="fa-solid fa-box-open"></i>
+      </div>
+      <h3 class="empty-title">No products found</h3>
+      <p class="empty-msg">Try adjusting your search or filters.</p>
+      <button class="btn btn-primary" id="emptyRetryBtn">Clear Filters</button>
+    </div>
+
+    <!-- Load More -->
+    <div class="load-more-wrap" id="loadMoreWrap">
+      <button class="btn btn-outline load-more-btn" id="loadMoreBtn">
+        Load More <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ===== WISHLIST SECTION ===== -->
+  <section class="wishlist-section" id="wishlist-section">
+    <div class="section-header">
+      <h2 class="section-title">Your Wishlist</h2>
+      <p class="section-sub">Items you've saved for later.</p>
+    </div>
+    <div class="product-grid wishlist-grid" id="wishlistGrid" role="list">
+      <!-- Dynamically populated -->
+    </div>
+    <div class="empty-state hidden" id="wishlistEmptyState">
+      <div class="empty-illustration"><i class="fa-regular fa-heart"></i></div>
+      <h3 class="empty-title">Your wishlist is empty</h3>
+      <p class="empty-msg">Click the heart icon on any product to save it here.</p>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials-section">
+    <div class="section-header">
+      <h2 class="section-title">What People Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">"Absolutely premium quality. The shopping experience is unmatched — fast, elegant, and reliable."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SK</div>
+          <div>
+            <strong>Sofia K.</strong>
+            <span>Verified Buyer</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">"Beautifully curated selection. I found exactly what I was looking for within seconds."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AM</div>
+          <div>
+            <strong>Alex M.</strong>
+            <span>Loyal Customer</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+        </div>
+        <p class="testimonial-text">"The dark mode is stunning. This is what online shopping should feel like."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JL</div>
+          <div>
+            <strong>Jordan L.</strong>
+            <span>Design Enthusiast</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section">
+    <div class="section-header">
+      <h2 class="section-title">Frequently Asked</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How long does shipping take? <i class="fa-solid fa-chevron-down faq-icon"></i>
+        </button>
+        <div class="faq-answer">Standard shipping takes 3–5 business days. Express shipping is available at checkout for 1–2 day delivery.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What is your return policy? <i class="fa-solid fa-chevron-down faq-icon"></i>
+        </button>
+        <div class="faq-answer">We offer a 30-day hassle-free return policy. Items must be unused and in original packaging.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Are the products authentic? <i class="fa-solid fa-chevron-down faq-icon"></i>
+        </button>
+        <div class="faq-answer">Every product in our store is 100% authentic and sourced directly from verified suppliers.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How do I track my order? <i class="fa-solid fa-chevron-down faq-icon"></i>
+        </button>
+        <div class="faq-answer">After checkout, you'll receive an email with a tracking link. You can also check your order status in your account dashboard.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter-section">
+    <div class="newsletter-inner">
+      <div class="newsletter-content">
+        <h2 class="newsletter-title">Stay in the Loop</h2>
+        <p class="newsletter-sub">New arrivals, exclusive offers, and style guides — delivered weekly.</p>
+      </div>
+      <div class="newsletter-form-wrap">
+        <div class="newsletter-form">
+          <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="your@email.com" aria-label="Email for newsletter" />
+          <button class="btn btn-primary newsletter-btn" id="newsletterBtn">Subscribe</button>
+        </div>
+        <p class="newsletter-disclaimer">No spam. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section" id="contact">
+    <div class="section-header">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-sub">We're here to help.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <i class="fa-solid fa-envelope contact-icon"></i>
+        <h4>Email</h4>
+        <p>hello@luxestore.com</p>
+      </div>
+      <div class="contact-card">
+        <i class="fa-solid fa-phone contact-icon"></i>
+        <h4>Phone</h4>
+        <p>+1 (800) LUXE-001</p>
+      </div>
+      <div class="contact-card">
+        <i class="fa-solid fa-location-dot contact-icon"></i>
+        <h4>Address</h4>
+        <p>142 Premium Ave, NY 10001</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon"><i class="fa-solid fa-gem"></i></span>
+        <span class="logo-text">LUXE</span>
+        <p class="footer-tagline">Curated for the discerning few.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h5>Shop</h5>
+        <a href="#products">All Products</a>
+        <a href="#categories">Categories</a>
+        <a href="#wishlist-section">Wishlist</a>
+      </div>
+      <div class="footer-links">
+        <h5>Support</h5>
+        <a href="#contact">Contact Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#">Returns</a>
+      </div>
+      <div class="footer-links">
+        <h5>Legal</h5>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 LUXE Store. All rights reserved.</p>
+      <p>Built with <i class="fa-solid fa-heart footer-heart"></i> using Vanilla JS</p>
+    </div>
+  </footer>
+
+  <!-- ===== PRODUCT MODAL ===== -->
+  <div class="modal-overlay hidden" id="productModalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle">
+    <div class="modal" id="productModal">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-body">
+        <div class="modal-img-wrap">
+          <img src="" alt="" id="modalImage" class="modal-img" />
+          <span class="modal-category-badge" id="modalCategory"></span>
+        </div>
+        <div class="modal-info">
+          <h2 class="modal-product-title" id="modalProductTitle"></h2>
+          <div class="modal-rating-row">
+            <div class="modal-stars" id="modalStars"></div>
+            <span class="modal-reviews" id="modalReviews"></span>
+          </div>
+          <p class="modal-price" id="modalPrice"></p>
+          <p class="modal-description" id="modalDescription"></p>
+          <div class="modal-qty-row">
+            <span class="qty-label">Quantity</span>
+            <div class="qty-control">
+              <button class="qty-btn" id="modalQtyMinus" aria-label="Decrease quantity">−</button>
+              <span class="qty-value" id="modalQtyValue">1</span>
+              <button class="qty-btn" id="modalQtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+          <button class="btn btn-primary modal-add-to-cart" id="modalAddToCartBtn">
+            <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="cart-overlay hidden" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" role="complementary">
+    <div class="cart-header">
+      <h3 class="cart-title"><i class="fa-solid fa-bag-shopping"></i> Your Cart</h3>
+      <button class="icon-btn" id="cartCloseBtn" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- dynamically injected -->
+    </div>
+    <div class="cart-empty hidden" id="cartEmpty">
+      <div class="cart-empty-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+      <p>Your cart is empty.</p>
+      <button class="btn btn-outline" id="cartContinueShoppingBtn">Continue Shopping</button>
+    </div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span class="cart-subtotal" id="cartSubtotal">$0.00</span>
+      </div>
+      <p class="cart-shipping-note"><i class="fa-solid fa-truck"></i> Free shipping on all orders</p>
+      <button class="btn btn-primary checkout-btn" id="checkoutBtn">
+        Checkout <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ===== CHECKOUT MODAL ===== -->
+  <div class="modal-overlay hidden" id="checkoutModalOverlay" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal checkout-modal" id="checkoutModal">
+      <button class="modal-close" id="checkoutModalCloseBtn" aria-label="Close checkout">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="checkout-success">
+        <div class="checkout-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h2 id="checkoutTitle">Order Confirmed!</h2>
+        <p>Thank you for shopping at LUXE. Your order is on its way.</p>
+      </div>
+      <div class="checkout-order-summary" id="checkoutOrderSummary">
+        <!-- dynamically injected -->
+      </div>
+      <div class="checkout-total-row">
+        <span>Total Paid</span>
+        <span id="checkoutTotal" class="checkout-total-amount"></span>
+      </div>
+      <button class="btn btn-primary" id="checkoutDoneBtn">
+        Continue Shopping <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== COMPARE MODAL ===== -->
+  <div class="modal-overlay hidden" id="compareModalOverlay" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+    <div class="modal compare-modal" id="compareModal">
+      <button class="modal-close" id="compareModalCloseBtn" aria-label="Close compare">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h2 id="compareTitle" class="compare-title">Compare Products</h2>
+      <div class="compare-grid" id="compareGrid">
+        <!-- dynamically injected -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Compare Bar -->
+  <div class="compare-bar hidden" id="compareBar">
+    <span class="compare-bar-label" id="compareBarLabel">0 items selected</span>
+    <button class="btn btn-primary compare-now-btn" id="compareNowBtn" disabled>
+      <i class="fa-solid fa-scale-balanced"></i> Compare
+    </button>
+    <button class="btn btn-outline" id="compareClearBtn">Clear</button>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top hidden" id="backToTopBtn" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- JS Modules -->
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* ============================================================
+   LUXE E-Commerce — skeleton.css
+   Skeleton loading card styles with shimmer animation.
+   ============================================================ */
+
+/* ── Shimmer keyframe ── */
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+
+/* ── Base skeleton element ── */
+.skeleton {
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--sk-base, #E8E4DD) 25%,
+    var(--sk-shine, #F4F1EB) 50%,
+    var(--sk-base, #E8E4DD) 75%
+  );
+  background-size: 1200px 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+/* Dark mode skeleton colours */
+[data-theme="dark"] .skeleton {
+  --sk-base:  #252420;
+  --sk-shine: #302E28;
+}
+
+/* ── Skeleton Card ── */
+.skeleton-card {
+  background: var(--clr-surface, #fff);
+  border: 1px solid var(--clr-border, #E8E4DD);
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+/* Card image area */
+.skeleton-card__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+/* Card body */
+.skeleton-card__body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Badge */
+.skeleton-card__badge {
+  height: 20px;
+  width: 70px;
+  border-radius: 9999px;
+}
+
+/* Title lines */
+.skeleton-card__title-line {
+  height: 14px;
+  border-radius: 6px;
+}
+.skeleton-card__title-line--full  { width: 100%; }
+.skeleton-card__title-line--short { width: 65%; }
+
+/* Stars row */
+.skeleton-card__stars-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.skeleton-card__star {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+.skeleton-card__rating-count {
+  width: 40px;
+  height: 12px;
+  border-radius: 6px;
+}
+
+/* Footer row */
+.skeleton-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+.skeleton-card__price {
+  width: 70px;
+  height: 20px;
+  border-radius: 6px;
+}
+.skeleton-card__btn {
+  width: 90px;
+  height: 34px;
+  border-radius: 9999px;
+}

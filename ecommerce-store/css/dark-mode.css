@@ -1,0 +1,194 @@
+/* ============================================================
+   LUXE E-Commerce — dark-mode.css
+   Dark theme overrides. Applied via [data-theme="dark"] on <html>.
+   ============================================================ */
+
+[data-theme="dark"] {
+  /* Override palette tokens */
+  --clr-bg:          #0F0F0E;
+  --clr-bg-alt:      #171714;
+  --clr-surface:     #1C1B18;
+  --clr-surface-2:   #252420;
+  --clr-border:      #302E28;
+  --clr-text:        #F2EFE8;
+  --clr-text-2:      #A8A49C;
+  --clr-text-muted:  #6A6660;
+  --clr-accent:      #D4AF70;
+  --clr-accent-dark: #B8903A;
+  --clr-accent-2:    #1E2A3A;
+  --clr-accent-rgb:  212, 175, 112;
+
+  /* Shadows darker */
+  --shadow-xs: 0 1px 4px rgba(0,0,0,.3);
+  --shadow-sm: 0 2px 10px rgba(0,0,0,.35);
+  --shadow-md: 0 8px 28px rgba(0,0,0,.4);
+  --shadow-lg: 0 20px 56px rgba(0,0,0,.5);
+  --shadow-xl: 0 36px 88px rgba(0,0,0,.6);
+}
+
+/* ── Header ── */
+[data-theme="dark"] .site-header {
+  background: rgba(15, 15, 14, .88);
+  border-bottom-color: var(--clr-border);
+}
+
+/* ── Hero ── */
+[data-theme="dark"] .hero-card-glass {
+  background: rgba(28, 27, 24, .7);
+  border-color: rgba(242, 239, 232, .12);
+}
+
+/* ── Product Card ── */
+[data-theme="dark"] .product-card {
+  background: var(--clr-surface);
+  border-color: var(--clr-border);
+}
+[data-theme="dark"] .product-card:hover {
+  border-color: rgba(var(--clr-accent-rgb), .35);
+}
+[data-theme="dark"] .card-img-wrap {
+  background: var(--clr-surface-2);
+}
+[data-theme="dark"] .card-action-btn {
+  background: var(--clr-surface);
+  border-color: var(--clr-border);
+  color: var(--clr-text-2);
+}
+
+/* ── Filter & Search ── */
+[data-theme="dark"] .filter-search-input,
+[data-theme="dark"] .sort-select {
+  background: var(--clr-surface);
+  border-color: var(--clr-border);
+  color: var(--clr-text);
+}
+[data-theme="dark"] .filter-search-input:focus,
+[data-theme="dark"] .sort-select:focus {
+  border-color: var(--clr-accent);
+}
+[data-theme="dark"] .sort-select option {
+  background: var(--clr-surface);
+  color: var(--clr-text);
+}
+[data-theme="dark"] .category-btn {
+  background: var(--clr-surface);
+  border-color: var(--clr-border);
+  color: var(--clr-text-2);
+}
+[data-theme="dark"] .category-btn:hover {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+/* ── Modal ── */
+[data-theme="dark"] .modal {
+  background: var(--clr-surface);
+}
+[data-theme="dark"] .modal-img-wrap {
+  background: var(--clr-surface-2);
+}
+[data-theme="dark"] .modal-close {
+  background: var(--clr-surface-2);
+  border-color: var(--clr-border);
+}
+
+/* ── Cart Drawer ── */
+[data-theme="dark"] .cart-drawer {
+  background: var(--clr-surface);
+  border-left-color: var(--clr-border);
+}
+[data-theme="dark"] .cart-item {
+  background: var(--clr-surface-2);
+  border-color: var(--clr-border);
+}
+[data-theme="dark"] .cart-item-img {
+  background: var(--clr-surface);
+  border-color: var(--clr-border);
+}
+[data-theme="dark"] .cart-qty-control {
+  border-color: var(--clr-border);
+}
+
+/* ── Search Input (header) ── */
+[data-theme="dark"] .search-input {
+  background: var(--clr-surface);
+  border-color: var(--clr-border);
+  color: var(--clr-text);
+}
+
+/* ── Testimonials ── */
+[data-theme="dark"] .testimonial-card {
+  background: var(--clr-surface);
+  border-color: var(--clr-border);
+}
+
+/* ── FAQ ── */
+[data-theme="dark"] .faq-item {
+  background: var(--clr-surface);
+  border-color: var(--clr-border);
+}
+[data-theme="dark"] .faq-question { color: var(--clr-text); }
+[data-theme="dark"] .faq-question:hover { background: var(--clr-surface-2); }
+
+/* ── Contact ── */
+[data-theme="dark"] .contact-card {
+  background: var(--clr-surface);
+  border-color: var(--clr-border);
+}
+
+/* ── Footer ── */
+[data-theme="dark"] .site-footer {
+  background: #0A0A09;
+}
+
+/* ── Compare bar ── */
+[data-theme="dark"] .compare-bar { background: var(--clr-surface-2); }
+
+/* ── Brands strip ── */
+[data-theme="dark"] .brands-strip { background: var(--clr-surface); }
+
+/* ── Toast ── */
+[data-theme="dark"] .toast { background: var(--clr-surface-2); color: var(--clr-text); }
+[data-theme="dark"] .toast.success { background: var(--clr-success); color: #fff; }
+[data-theme="dark"] .toast.error   { background: var(--clr-danger); color: #fff; }
+[data-theme="dark"] .toast.info    { background: var(--clr-accent-dark); color: #fff; }
+
+/* ── Dark theme icon ── */
+[data-theme="dark"] #themeIcon::before {
+  content: '\f185'; /* fa-sun unicode */
+}
+
+/* ── Scrollbar ── */
+[data-theme="dark"] ::-webkit-scrollbar-track { background: var(--clr-bg); }
+[data-theme="dark"] ::-webkit-scrollbar-thumb { background: var(--clr-border); }
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: var(--clr-text-muted); }
+
+/* ── Checkout modal ── */
+[data-theme="dark"] .checkout-total-row { background: var(--clr-surface-2); }
+
+/* ── Compare modal ── */
+[data-theme="dark"] .compare-modal { background: var(--clr-surface); }
+[data-theme="dark"] .compare-card { border-color: var(--clr-border); }
+[data-theme="dark"] .compare-card-img { background: var(--clr-surface-2); }
+
+/* ── Mobile nav ── */
+[data-theme="dark"] .mobile-nav {
+  background: var(--clr-surface);
+  border-top-color: var(--clr-border);
+}
+
+/* ── Wishlist section ── */
+[data-theme="dark"] .wishlist-section { border-top-color: var(--clr-border); }
+
+/* ── Newsletter ── */
+[data-theme="dark"] .newsletter-section {
+  background: linear-gradient(135deg, #111820 0%, #0D1520 100%);
+}
+
+/* ── No-flash script helper (inline in <head>) ──
+   The actual no-flash is handled in app.js via localStorage check before body renders.
+   We add a quick transition block on first load to prevent flicker.
+*/
+[data-theme="dark"] body {
+  color-scheme: dark;
+}
