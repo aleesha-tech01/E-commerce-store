@@ -427,9 +427,5 @@ const hideErrorState = () => {
   if (error) error.classList.add('hidden');
 };
 
-# video link :
-
-  https://drive.google.com/file/d/1PhAn8lrs3_GMa-7zna2JJdm1OSwKIiDP/view?usp=drivesdk
-
 
   
