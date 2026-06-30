@@ -150,27 +150,6 @@ The website works well on desktop, tablet, and mobile devices.
 The website supports keyboard navigation and includes accessibility features for a better user experience.
 
 ---
-
-# output screenshot:
-
-![alt text](<Screenshot 2026-06-28 134317-1.png>)
-
-![alt text](<Screenshot 2026-06-28 134332.png>)
-
-![alt text](<Screenshot 2026-06-28 134538.png>)
-
-![alt text](<Screenshot 2026-06-28 134356.png>)
-
-![alt text](<Screenshot 2026-06-28 134426.png>)
-
-![alt text](<Screenshot 2026-06-28 134453.png>)
-
-![alt text](<Screenshot 2026-06-28 134503.png>)
-
-![alt text](<Screenshot 2026-06-28 134517.png>)
-
----
-
 # JavaScript File Order
 
 The JavaScript files must be loaded in this order because each file depends on the previous one.
@@ -209,8 +188,35 @@ You can easily change different parts of the project:
 
 This project is a fully responsive e-commerce website. It includes modern features such as product search, category filtering, shopping cart, wishlist, compare products, checkout, and Dark Mode. It is built using only HTML, CSS, and JavaScript without using any frameworks.
 
+# output screenshot:
 
-# video link :
+# Desktop:
+
+![alt text](<Screenshot 2026-06-30 091110-2.png>)
+
+![alt text](<Screenshot 2026-06-30 091259-2.png>)
+
+![alt text](<Screenshot 2026-06-30 131435.png>)
+
+![alt text](<Screenshot 2026-06-30 131450.png>)
+
+
+# mobile screenshot:
+
+![alt text](<Screenshot 2026-06-30 124824.png>)
+
+![alt text](<Screenshot 2026-06-30 124833.png>)
+
+![alt text](<Screenshot 2026-06-30 131918.png>)
+
+# ipad :
+
+![alt text](<Screenshot 2026-06-30 130436.png>)
+
+![alt text](<Screenshot 2026-06-30 131859.png>)
+
+
+# video link + live demo :
 
   https://drive.google.com/file/d/1PhAn8lrs3_GMa-7zna2JJdm1OSwKIiDP/view?usp=drivesdk
 
